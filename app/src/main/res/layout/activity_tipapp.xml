@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@color/gray"
+    android:gravity="bottom"
+    android:orientation="vertical"
+    tools:context=".TipApp">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/montserrat_medium_italic"
+        android:gravity="center"
+        android:letterSpacing="0.429"
+        android:text="@string/TipApp"
+        android:textColor="@color/pink"
+        android:textSize="60dp" />
+
+    <TextView
+        android:id="@+id/textViewEnterBillAmount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:layout_marginBottom="30dp"
+        android:fontFamily="@font/montserrat_medium"
+        android:gravity="center"
+        android:letterSpacing="0.1428571"
+        android:text="@string/enter_bill_amount"
+        android:textColor="@color/white_"
+        android:textSize="20dp" />
+
+    <EditText
+        android:textColor="@color/white_"
+        android:id="@+id/editTextBillAmount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:layout_below="@id/textViewEnterBillAmount"
+        android:layout_marginHorizontal="22dp"
+        android:layout_marginBottom="78dp"
+        android:backgroundTint="@color/light_gray"
+        android:hint="Bill amount"
+        android:textColorHint="@color/light_gray"
+        android:textSize="14dp" />
+
+    <TextView
+
+        android:id="@+id/textViewChooseTipAmount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextBillAmount"
+        android:layout_marginBottom="18dp"
+        android:fontFamily="@font/montserrat_medium"
+        android:gravity="center"
+        android:letterSpacing="0.1428571"
+        android:text="@string/choose_tip_amount"
+        android:textColor="@color/white_"
+        android:textSize="20dp" />
+
+    <LinearLayout
+        android:id="@+id/buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewChooseTipAmount"
+        android:layout_marginTop="18dp"
+        android:layout_marginBottom="78dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:paddingTop="-10.dp"
+            android:gravity="center"
+            android:id="@+id/btnMinus"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:layout_marginHorizontal="70dp"
+            android:backgroundTint="@color/green"
+            android:text="@string/minus"
+            android:textAllCaps="false"
+            android:textSize="22dp" />
+
+        <Button
+            android:paddingTop="0dp"
+            android:gravity="center"
+            android:id="@+id/btnPlus"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:layout_marginHorizontal="70dp"
+            android:backgroundTint="@color/green"
+            android:text="@string/plus"
+            android:textAllCaps="false"
+            android:textSize="22dp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/percentage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewChooseTipAmount"
+        android:layout_marginTop="23dp"
+        android:fontFamily="@font/montserrat_medium"
+        android:gravity="center"
+        android:text="0%"
+        android:textColor="@color/milky"
+        android:textSize="25dp" />
+
+    <TextView
+        android:id="@+id/totalAmount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttons"
+        android:fontFamily="@font/montserrat_semibold"
+        android:gravity="center"
+        android:letterSpacing="0.2"
+        android:text="0.00 kr"
+        android:textColor="@color/white_"
+        android:textSize="40dp" />
+
+    <TextView
+        android:id="@+id/TextViewTotal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/totalAmount"
+        android:layout_marginBottom="35dp"
+        android:fontFamily="@font/montserrat"
+        android:gravity="center"
+        android:text="@string/total"
+        android:textColor="@color/pink"
+        android:textSize="20dp" />
+
+    <LinearLayout
+        android:id="@+id/billAndTip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/TextViewTotal"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textViewBill"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/montserrat_medium"
+            android:gravity="center"
+            android:text="@string/_0_00_kr"
+            android:textColor="@color/white_"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/TextViewTip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/montserrat_medium"
+            android:gravity="center"
+            android:text="@string/_0_00_kr"
+            android:textColor="@color/white_"
+            android:textSize="20dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/billAndTip"
+        android:layout_marginBottom="102dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/montserrat_medium"
+            android:gravity="center"
+            android:letterSpacing="0.107"
+            android:text="@string/bill"
+            android:textColor="@color/pink"
+            android:textSize="15dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/montserrat_medium"
+            android:gravity="center"
+            android:letterSpacing="0.107"
+            android:text="@string/tip"
+            android:textColor="@color/pink"
+            android:textSize="15sp" />
+    </LinearLayout>
+</RelativeLayout>

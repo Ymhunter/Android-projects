@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name" translatable="false">Module 201 - Project 2</string>
+    <string name="tipsy">Tipsy</string>
+    <string name="TipApp">Tipsy</string>
+    <string name="enter_bill_amount">Enter bill amount</string>
+    <string name="choose_tip_amount">Choose Tip Amount</string>
+    <string name="minus">-</string>
+    <string name="plus">+</string>
+    <string name="total">total</string>
+    <string name="_0_00_kr">0.00 kr</string>
+    <string name="bill">bill</string>
+    <string name="tip">tip</string>
+</resources>
